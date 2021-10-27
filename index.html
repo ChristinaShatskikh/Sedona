@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="page-body">
   <div class="container">
     <header class="page-header">
       <nav class="main-nav">
@@ -53,14 +53,14 @@
       <section class="features">
         <h2 class="visually-hidden">Преимущества Седоны</h2>
 
-        <div class="features__blocks features__blocks--intro">
+        <div class="features__blocks">
           <div class="features__block">
             <h3 class="features__title">Настоящий городок</h3>
             <p class="features__number">&ndash; №1 &ndash;</p>
             <p class="features__text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
 
-          <div class="features__image-wrapper">
+          <div class="features__image-block">
             <img class="features__image" src="img/sedona-town.jpg" width="800" height="256" alt="Внешний облик городка Седона">
           </div>
         </div>
@@ -80,14 +80,14 @@
           </li>
         </ul>
 
-        <div class="features__blocks features__blocks--intro features__blocks--reverse">
-          <div class="features__block">
+        <div class="features__blocks">
+          <div class="features__block features__block--reverse">
             <h3 class="features__title">Там есть Мост дьявола</h3>
             <p class="features__number">&ndash; №2 &ndash;</p>
             <p class="features__text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
           </div>
 
-          <div class="features__image-wrapper">
+          <div class="features__image-block features__image-block--reverse">
             <img class="features__image" src="img/devil-bridge.jpg" width="800" height="256" alt="Мост дьявола">
           </div>
         </div>
@@ -96,19 +96,19 @@
           <div class="features__block">
             <h3 class="features__title features__title--last">Небольшая площадь</h3>
             <p class="features__number">&ndash; №3 &ndash;</p>
-            <p class="features__text">Все достопримечательности находятся очень близко</p>
+            <p class="features__text">Все достопримечательности <br>находятся очень близко</p>
           </div>
 
           <div class="features__block">
             <h3 class="features__title features__title--last">Красивая дорога</h3>
             <p class="features__number">&ndash; №4 &ndash;</p>
-            <p class="features__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <p class="features__text">Ехать в Седону из Лас-Вегаса совсем <br>не скучно!</p>
           </div>
 
           <div class="features__block">
             <h3 class="features__title features__title--last">Мало туристов</h3>
             <p class="features__number">&ndash; №5 &ndash;</p>
-            <p class="features__text">Большинство едет в Гранд-Каньон и толпится там</p>
+            <p class="features__text">Большинство едет в Гранд-Каньон <br>и толпится там</p>
           </div>
         </div>
       </section>
@@ -157,7 +157,7 @@
             </div>
           </div>
 
-          <button class="search-form__button button button--blue" type="submit">Найти</button>
+          <button class="search-form__submit button button--blue" type="submit">Найти</button>
         </form>
       </section>
 
@@ -165,10 +165,11 @@
         <h2 class="visually-hidden">Седона на карте</h2>
         <img class="map__image" src="img/map.png" width="1199" height="594" alt="Карта местности">
       </section>
+
     </main>
 
     <footer class="page-footer page-footer--index">
-      <div class="page-footer__column">
+      <div class="page-footer__column page-footer__column--contacts">
         <p class="page-footer__hashtag">#visitSEDONA</p>
         <p class="page-footer__phone">Тел: <a class="page-footer__phone-link" href="tel:+74956660166">+7(495) 666-01-66</a></p>
       </div>
@@ -199,7 +200,7 @@
         </ul>
       </div>
 
-      <div class="page-footer__column">
+      <div class="page-footer__column page-footer__column--copyright">
         <span class="page-footer-copyright-text">Website by</span>
         <a class="page-footer-copyright-link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="HTML Academy">
           <svg class="page-footer-copyright-icon" width="115" height="41" viewBox="0 0 115 41" fill="none" xmlns="http://www.w3.org/2000/svg">
