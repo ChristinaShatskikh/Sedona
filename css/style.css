@@ -20,43 +20,26 @@
 :root {
   --basic-black: #000000;
   --basic-white: #ffffff;
-  --transparent-white: rgba(255, 255, 255, 0.9);
+  --basic-grey: #f2f2f2;
+  --basic-brown: #766357;
   --accent-color: #81B3D2;
-  --basic-grey: rgba(0, 0, 0, 0.3);
-  --body-shadow-color: rgba(0, 1, 1, 0.2);
+  --transparent-white: rgba(255, 255, 255, 0.9);
+  --transparent-black: rgba(0, 0, 0, 0.3);
+  --shadow-black: rgba(0, 1, 1, 0.2);
 
-  --bg-color-body: #f2f2f2;
-  --bg-color-intro: #B6C0C6;
-  --bg-color-features: #EEEEEE;
+  --middle-brown: #604E43;
+  --dark-brown: #503E33;
+  --middle-blue: #669EC0;
+  --dark-blue: #5496BD;
 
-  --bg-color-button-form: #766357;
-  --bg-color-button-form--hover: #604E43;
-  --bg-color-button-form--active: #503E33;
-
-  --bg-color-button-social: var(--accent-color);
-  --bg-color-button-social--hover: #669EC0;
-  --bg-color-button-social--active: #5496BD;
-
-  --bg-color-input: var(--bg-color-body);
-  --bg-color-input--hover: #EBEBEB;
-  --bg-color-input--focus: var(--basic-white);
-  --border-color-input--focus: #E5E5E5;
-
-  --bg-color-button-sorting: #CACACA;
-  --border-filter-button--disabled: #6A6A6A;
-
-  --color-copyright: #231F20;
-  --color-copyright--hover: var(--accent-color);
-  --color-copyright--active: #BDBBBC;
-
-  --font-color-base: #333333;
-  --font-color-secondary: var(--basic-white);
-  --font-color-heading: var(--basic-black);
-
-  --font-color-menu: var(--basic-black);
-  --font-color-menu--hover: var(--accent-color);
-  --font-color-menu--active: var(--basic-grey);
-  --font-color-menu--current: #766357;
+  --light-grey: #EEEEEE;
+  --gallery-grey: #EBEBEB;
+  --mercury-grey: #E5E5E5;
+  --silver-grey: #CACACA;
+  --pale-slate-grey: #BDBBBC;
+  --submarine-grey: #B6C0C6;
+  --dark-grey: #6A6A6A;
+  --darkest-grey: #333333;
 }
 
 /* Global */
@@ -72,8 +55,8 @@
   font-weight: 400;
 
   text-transform: uppercase;
-  color: var(--font-color-base);
-  background-color: var(--bg-color-body);
+  color: var(--darkest-grey);
+  background-color: var(--basic-grey);
 
   height: 100%;
 }
@@ -111,7 +94,7 @@ input[type="radio"].visually-hidden {
   margin: 0 auto;
 
   background-color: var(--basic-white);
-  box-shadow: 0px 5px 15px var(--body-shadow-color);
+  box-shadow: 0px 5px 15px var(--shadow-black);
 
   min-height: 100%;
   display: grid;
@@ -135,24 +118,24 @@ input[type="radio"].visually-hidden {
 }
 
 .main-nav__link {
-  color: var(--font-color-menu);
+  color: var(--basic-black);
   font-weight: 700;
 }
 
 .main-nav__link:hover,
 .main-nav__link:focus {
-  color: var(--font-color-menu--hover);
+  color: var(--accent-color);
 }
 
 .main-nav__link:active {
-  color: var(--font-color-menu--active);
+  color: var(--transparent-black);
 }
 
 .main-nav__link--current,
 .main-nav__link--current:hover,
 .main-nav__link--current:focus,
 .main-nav__link--current:active {
-  color: var(--font-color-menu--current);
+  color: var(basic-brown);
 }
 
 /* Main */
@@ -161,7 +144,7 @@ input[type="radio"].visually-hidden {
   min-height: 509px;
   padding-top: 77px;
 
-  background-color: var(--bg-color-intro);
+  background-color: var(--submarine-grey);
 }
 
 .page-main__welcome {
@@ -187,7 +170,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   font-weight: 700;
 
-  color: var(--font-color-heading);
+  color: var(--basic-black);
 }
 
 /* Features */
@@ -197,7 +180,7 @@ input[type="radio"].visually-hidden {
   grid-template-columns: 1fr 1fr 1fr;
   min-height: 256px;
 
-  color: var(--font-color-secondary);
+  color: var(--basic-white);
   background-color: var(--accent-color);
 }
 
@@ -220,7 +203,7 @@ input[type="radio"].visually-hidden {
   font-size: 21px;
   font-weight: 700;
 
-  color: var(--font-color-secondary);
+  color: var(--basic-white);
 }
 
 .features__number {
@@ -245,12 +228,12 @@ input[type="radio"].visually-hidden {
 }
 
 .features__blocks--last {
-  color: var(--font-color-base);
-  background-color: var(--bg-color-features);
+  color: var(--darkest-grey);
+  background-color: var(--light-grey);
 }
 
 .features__title--last {
-  color: var(--font-color-heading);
+  color: var(--basic-black);
 }
 
 /* Advices */
@@ -277,7 +260,7 @@ input[type="radio"].visually-hidden {
 
   font-size: 21px;
 
-  color: var(--font-color-heading);
+  color: var(--basic-black);
 }
 
 .advices__text {
@@ -330,41 +313,41 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
 
   text-transform: inherit;
-  color: var(--font-color-secondary);
+  color: var(--basic-white);
   cursor: pointer;
 }
 
 .button--brown {
-  background-color: var(--bg-color-button-form);
+  background-color: var(--basic-brown);
 }
 
 .button--brown:hover,
 .button--brown:focus {
-  background-color: var(--bg-color-button-form--hover);
+  background-color: var(--middle-brown);
 }
 
 .button--brown:active {
   color: rgba(255, 255, 255, 0.3);
-  background-color: var(--bg-color-button-form--active);
+  background-color: var(--dark-brown);
 }
 
 .search-form__button {
-  background-color: var(--bg-color-input);
+  background-color: var(--basic-grey);
   border: none;
 }
 
 .button--blue {
-  background-color: var(--bg-color-button-social);
+  background-color: var(--accent-color);
 }
 
 .button--blue:hover,
 .button--blue:focus {
-  background-color: var(--bg-color-button-social--hover);
+  background-color: var(--middle-blue);
 }
 
 .button--blue:active {
   color: rgba(255, 255, 255, 0.3);
-  background-color: var(--bg-color-button-social--active);
+  background-color: var(--dark-blue);
 }
 
 /* Search form */
@@ -385,17 +368,17 @@ input[type="radio"].visually-hidden {
   font: inherit;
   text-transform: inherit;
 
-  background-color: var(--bg-color-input);
+  background-color: var(--basic-grey);
   border: none;
 }
 
 .seacrh-form__input:hover {
-  background-color: var(--bg-color-input--hover);
+  background-color: var(--gallery-grey);
 }
 
 .seacrh-form__input:focus {
-  background-color: var(--bg-color-input--focus);
-  outline: 2px solid var(--border-color-input--focus);
+  background-color: var(--basic-white);
+  outline: 2px solid var(--mercury-grey);
 }
 
 .search-form__calendar {
@@ -426,8 +409,8 @@ input[type="radio"].visually-hidden {
   padding: 27px 73px 31px;
   line-height: 21px;
 
-  color: var(--font-color-secondary);
-  background-color: var(--bg-color-intro);
+  color: var(--basic-white);
+  background-color: var(--submarine-grey);
 }
 
 .filters-form__fieldset {
@@ -455,7 +438,7 @@ input[type="radio"].visually-hidden {
 .filters-form__text-input {
   font: inherit;
 
-  color: var(--font-color-secondary);
+  color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
   border-radius: 2px;
@@ -465,7 +448,7 @@ input[type="radio"].visually-hidden {
   font: inherit;
   text-transform: inherit;
 
-  color: var(--font-color-secondary);
+  color: var(--basic-white);
   background-color: transparent;
   border: 2px solid var(--basic-white);
 
@@ -487,7 +470,7 @@ input[type="radio"].visually-hidden {
   column-gap: 29px;
   padding: 30px 73px;
 
-  border-bottom: 1px solid var(--border-color-input--focus);
+  border-bottom: 1px solid var(--mercury-grey);
 }
 
 /* Sorting */
@@ -512,7 +495,7 @@ input[type="radio"].visually-hidden {
 }
 
 .sort-type__link {
-  color: var(--basic-grey);
+  color: var(--transparent-black);
 
   border-bottom: 1px dashed var(--accent-color);
 }
@@ -559,7 +542,7 @@ input[type="radio"].visually-hidden {
 .hotel__name-link {
   font-size: 21px;
   font-weight: 700;
-  color: var(--font-color-heading);
+  color: var(--basic-black);
 }
 
 .hotel__name-link:hover,
@@ -568,7 +551,7 @@ input[type="radio"].visually-hidden {
 }
 
 .hotel__name-link:active {
-  color: var(--basic-grey);
+  color: var(--transparent-black);
 }
 
 .hotel__description {
@@ -594,7 +577,7 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 21px;
 
-  background-color: var(--bg-color-body);
+  background-color: var(--basic-grey);
 }
 
 /* Footer */
@@ -651,11 +634,11 @@ input[type="radio"].visually-hidden {
 
 .page-footer-copyright-icon:hover path,
 .page-footer-copyright-icon:focus path {
-  fill: var(--color-copyright--hover);
+  fill: var(--accent-color);
 }
 
 .page-footer-copyright-icon:active path {
-  fill: var(--color-copyright--active);
+  fill: var(--pale-slate-grey);
 }
 
 
